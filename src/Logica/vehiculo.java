@@ -101,25 +101,8 @@ public class vehiculo {
             stmt.setString(5,this.modelo);
             stmt.setString(6,this.descripcion);
             stmt.setString(7,this.fechaInicioOperacion);
-            stmt.setString(8,"" + this.estadoAsignacion);
+            stmt.setString(8,"No Asignado");
             
-            stmt.executeUpdate();
-            stmt.close();
-            con.close();
-            
-            return true;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
-    }
-    
-    public boolean actualizarVehiculo(){
-        try {
-            cx = new conexion();
-            con = cx.getConexion();
-            
-            PreparedStatement stmt = con.prepareStatement("UPDATE vehiculo SET placa = '"+ this.placa + "',tipo='"+ this.tipo + "',marca='"+ this.marca + "',modelo='"+ this.modelo + "',descripcion='"+ this.descripcion + "',fechaInicioOperacion='"+ this.fechaInicioOperacion + "',estadoAsignacion='"+ this.estadoAsignacion + "' WHERE (codigoVehiculo = " + this.codigoVehiculo + ")");
             stmt.executeUpdate();
             stmt.close();
             con.close();
@@ -162,6 +145,38 @@ public class vehiculo {
             System.out.println(e.getMessage());
             return false;
         }
+    }
+    
+    public boolean actualizarVehiculo(){
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            
+            PreparedStatement stmt = con.prepareStatement(
+                    "UPDATE vehiculo SET placa = '"+ this.placa +
+                    "',tipo='" + this.tipo +
+                    "',marca='" + this.marca +
+                    "',modelo='" + this.modelo +
+                    "',descripcion='" + this.descripcion +
+                    "',fechaInicioOperacion='" + this.fechaInicioOperacion +
+                    "' WHERE (codigoVehiculo = " + this.codigoVehiculo + ")");
+            stmt.executeUpdate();
+            stmt.close();
+            con.close();
+            
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
+    
+    public boolean estadoAsignacion(){
+        try {
+            
+        } catch (Exception e) {
+        }
+        return false;
     }
     
     public boolean eliminarVehiculo(long codVehiculo){

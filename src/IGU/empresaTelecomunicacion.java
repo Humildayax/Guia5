@@ -22,7 +22,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         initComponents();
         TextPrompt tp = new TextPrompt("dd/mm/aaaa", VjTextFieldFIO);
         tp = new TextPrompt("Color, Tipo de caja, Informacion extra", VjTextAreaDescripcion);
-        tp = new TextPrompt("Asignado/No Asignado", VjTextFieldEstadoAsignacion);
         tp = new TextPrompt("dd/mm/aaaa", CjTextFieldFechaNacimiento);
         tp = new TextPrompt("Masculino/Femenino/Otro", CjTextFieldGenero);
         tp = new TextPrompt("Mañana/Tarde/Noche", CjTextFieldTurno);
@@ -48,7 +47,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
         VjTextFieldFIO = new javax.swing.JTextField();
         VjTextFieldModelo = new javax.swing.JTextField();
         VjTextFieldMarca = new javax.swing.JTextField();
@@ -58,9 +56,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         VjTextAreaDescripcion = new javax.swing.JTextArea();
         VjButtonGuardar = new javax.swing.JButton();
-        VjTextFieldEstadoAsignacion = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
-        AEjTextFieldEstadoAsignacion = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         AEjTextFieldFIO = new javax.swing.JTextField();
@@ -80,6 +76,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         AEjButtonConsultarV = new javax.swing.JButton();
         AEjButtonEliminarV = new javax.swing.JButton();
         AEjButtonActualizarV = new javax.swing.JButton();
+        AEjLabelEstadoAsignacion = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -181,9 +178,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel23.setText("Fecha de Inicio de Operacion");
 
-        jLabel24.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel24.setText("Estado de Asignacion");
-
         VjTextFieldFIO.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         VjTextFieldModelo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -207,8 +201,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 VjButtonGuardarActionPerformed(evt);
             }
         });
-
-        VjTextFieldEstadoAsignacion.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -245,16 +237,9 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                             .addComponent(VjTextFieldModelo, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel23)
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel24)
-                                .addGap(63, 63, 63)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(VjTextFieldFIO, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(VjTextFieldEstadoAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel23)
+                        .addGap(18, 18, 18)
+                        .addComponent(VjTextFieldFIO, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(193, Short.MAX_VALUE)
@@ -292,18 +277,12 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
                     .addComponent(VjTextFieldFIO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(VjTextFieldEstadoAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
                 .addComponent(VjButtonGuardar)
                 .addGap(27, 27, 27))
         );
 
         jTabbedPane2.addTab("Ingresar", jPanel3);
-
-        AEjTextFieldEstadoAsignacion.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
         jLabel41.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel41.setText("Estado de Asignacion");
@@ -369,6 +348,11 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             }
         });
 
+        AEjLabelEstadoAsignacion.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        AEjLabelEstadoAsignacion.setMaximumSize(new java.awt.Dimension(250, 20));
+        AEjLabelEstadoAsignacion.setMinimumSize(new java.awt.Dimension(233, 17));
+        AEjLabelEstadoAsignacion.setPreferredSize(new java.awt.Dimension(233, 17));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -413,9 +397,9 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel41)
                                         .addGap(63, 63, 63)))
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(AEjTextFieldFIO, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AEjTextFieldEstadoAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(AEjTextFieldFIO)
+                                    .addComponent(AEjLabelEstadoAsignacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(189, 189, 189)
                         .addComponent(AEjButtonConsultarV))
@@ -460,14 +444,14 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                     .addComponent(jLabel42)
                     .addComponent(AEjTextFieldFIO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel41)
-                    .addComponent(AEjTextFieldEstadoAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                    .addComponent(AEjLabelEstadoAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AEjButtonActualizarV)
                     .addComponent(AEjButtonEliminarV))
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Actualizar/Eliminar", jPanel4);
@@ -995,7 +979,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             veh.setModelo(VjTextFieldModelo.getText());
             veh.setDescripcion(VjTextAreaDescripcion.getText());
             veh.setFechaInicioOperacion(VjTextFieldFIO.getText());
-            veh.setEstadoAsignacion(VjTextFieldEstadoAsignacion.getText());
             
             boolean guardarOk = veh.guardarVehiculo();
             
@@ -1007,7 +990,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 VjTextFieldModelo.setText("");
                 VjTextAreaDescripcion.setText("");
                 VjTextFieldFIO.setText("");
-                VjTextFieldEstadoAsignacion.setText("");
                 
                 JOptionPane.showMessageDialog(rootPane, "Este Vehiculo ha sido Guardado Correctamente");
             }else{
@@ -1162,7 +1144,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 AEjTextFieldModelo.setText(veh.getModelo());
                 AEjTextAreaDescripcion.setText(veh.getDescripcion());
                 AEjTextFieldFIO.setText(veh.getFechaInicioOperacion());
-                AEjTextFieldEstadoAsignacion.setText(veh.getEstadoAsignacion());
+                AEjLabelEstadoAsignacion.setText(String.valueOf(veh.getEstadoAsignacion()));
                 
                 JOptionPane.showMessageDialog(rootPane, "Consulta realizada con exito");
             }else{
@@ -1184,7 +1166,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             veh.setModelo(AEjTextFieldModelo.getText());
             veh.setDescripcion(AEjTextAreaDescripcion.getText());
             veh.setFechaInicioOperacion(AEjTextFieldFIO.getText());
-            veh.setEstadoAsignacion(AEjTextFieldEstadoAsignacion.getText());
             boolean actualizarOk = veh.actualizarVehiculo();
             
             if (actualizarOk) {
@@ -1196,7 +1177,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 AEjTextFieldModelo.setText("");
                 AEjTextAreaDescripcion.setText("");
                 AEjTextFieldFIO.setText("");
-                AEjTextFieldEstadoAsignacion.setText("");
+                AEjLabelEstadoAsignacion.setText("");
 
                 JOptionPane.showMessageDialog(rootPane, "Este Vehiculo Fue Actualizado Correctamente");
             }else {
@@ -1220,7 +1201,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 AEjTextFieldModelo.setText("");
                 AEjTextAreaDescripcion.setText("");
                 AEjTextFieldFIO.setText("");
-                AEjTextFieldEstadoAsignacion.setText("");
+                AEjLabelEstadoAsignacion.setText("");
                 JOptionPane.showMessageDialog(rootPane, "Este Vehiculo Fue Eliminado Correctamente");
             }
             else {
@@ -1305,6 +1286,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JButton AEjButtonConsultarV;
     private javax.swing.JButton AEjButtonEliminarC;
     private javax.swing.JButton AEjButtonEliminarV;
+    private javax.swing.JLabel AEjLabelEstadoAsignacion;
     private javax.swing.JTextArea AEjTextAreaDescripcion;
     private javax.swing.JTextField AEjTextFieldApellido;
     private javax.swing.JTextField AEjTextFieldBarrio;
@@ -1315,7 +1297,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JTextField AEjTextFieldCodVehiculoV;
     private javax.swing.JTextField AEjTextFieldCorreo;
     private javax.swing.JTextField AEjTextFieldDireccion;
-    private javax.swing.JTextField AEjTextFieldEstadoAsignacion;
     private javax.swing.JTextField AEjTextFieldEstadoCivil;
     private javax.swing.JTextField AEjTextFieldFIO;
     private javax.swing.JTextField AEjTextFieldFechaNacimiento;
@@ -1349,7 +1330,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JButton VjButtonGuardar;
     private javax.swing.JTextArea VjTextAreaDescripcion;
     private javax.swing.JTextField VjTextFieldCodVehiculo;
-    private javax.swing.JTextField VjTextFieldEstadoAsignacion;
     private javax.swing.JTextField VjTextFieldFIO;
     private javax.swing.JTextField VjTextFieldMarca;
     private javax.swing.JTextField VjTextFieldModelo;
@@ -1371,7 +1351,6 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
