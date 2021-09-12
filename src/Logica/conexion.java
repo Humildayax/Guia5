@@ -17,7 +17,7 @@ public class conexion {
         String user = "root";
         String password = "20022509jd";
         try {
-            Class.forName(driver);
+//            Class.forName(driver);
             Connection con = DriverManager.getConnection(connectString, user, password);
             return con;
         } catch (Exception e) {

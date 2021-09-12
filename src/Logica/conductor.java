@@ -184,6 +184,8 @@ public class conductor {
             stmt.setString(16,"" + this.codigoVehiculo);
             
             stmt.executeUpdate();
+            stmt = con.prepareStatement("UPDATE vehiculo SET estadoAsignacion = 'Asignado' WHERE codigoVehiculo = '" + this.codigoVehiculo +"'");
+            stmt.executeUpdate();
             stmt.close();
             con.close();
             

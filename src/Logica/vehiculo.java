@@ -173,8 +173,18 @@ public class vehiculo {
     
     public boolean estadoAsignacion(){
         try {
+            cx = new conexion();
+            con = cx.getConexion();
+            
+            PreparedStatement stmt = con.prepareStatement(
+                    "UPDATE vehiculo SET estadoAsignacion = 'Asignado'"+
+                    "' WHERE (codigoVehiculo = " + this.codigoVehiculo + ")");
+            stmt.executeUpdate();
+            stmt.close();
+            con.close();
             
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return false;
     }
