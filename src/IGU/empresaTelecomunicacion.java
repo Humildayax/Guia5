@@ -971,7 +971,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private void VjButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VjButtonGuardarActionPerformed
         try {
             vehiculo veh = new vehiculo();
-            
+
             veh.setCodigoVehiculo(Long.parseLong(VjTextFieldCodVehiculo.getText()));
             veh.setPlaca(VjTextFieldPlaca.getText());
             veh.setTipo(VjTextFieldTipo.getText());
@@ -979,9 +979,9 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             veh.setModelo(VjTextFieldModelo.getText());
             veh.setDescripcion(VjTextAreaDescripcion.getText());
             veh.setFechaInicioOperacion(VjTextFieldFIO.getText());
-            
+
             boolean guardarOk = veh.guardarVehiculo();
-            
+
             if (guardarOk) {
                 VjTextFieldCodVehiculo.setText("");
                 VjTextFieldPlaca.setText("");
@@ -990,7 +990,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 VjTextFieldModelo.setText("");
                 VjTextAreaDescripcion.setText("");
                 VjTextFieldFIO.setText("");
-                
+
                 JOptionPane.showMessageDialog(rootPane, "Este Vehiculo ha sido Guardado Correctamente");
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Se ha presentado un error y no se ha podido guardar este Vehiculo en el sistema");
@@ -1003,7 +1003,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private void CjButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CjButtonGuardarActionPerformed
         try {
             conductor con = new conductor();
-            
+
             con.setId(Long.parseLong(CjTextFieldId.getText()));
             con.setNombre(CjTextFieldNombre.getText());
             con.setApellido(CjTextFieldApellido.getText());
@@ -1020,10 +1020,10 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             con.setBarrio(CjTextFieldBarrio.getText());
             con.setEstadoCivil(CjTextFieldEstadoCivil.getText());
             con.setCodigoVehiculo(Long.parseLong(CjTextFieldCodVehiculo.getText()));
-            
-            
+
+
             boolean guardarOk = con.guardarConductor();
-            
+
             if (guardarOk) {
                 CjTextFieldId.setText("");
                 CjTextFieldNombre.setText("");
@@ -1041,7 +1041,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 CjTextFieldBarrio.setText("");
                 CjTextFieldEstadoCivil.setText("");
                 CjTextFieldCodVehiculo.setText("");
-                
+
                 JOptionPane.showMessageDialog(rootPane, "Este Conductor ha sido Guardado Correctamente");
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Se ha presentado un error y no se ha podido guardar este Conductor en el sistema");
@@ -1072,7 +1072,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 AEjTextFieldBarrio.setText(con.getBarrio());
                 AEjTextFieldEstadoCivil.setText(con.getEstadoCivil());
                 AEjTextFieldCodVehiculo.setText(String.valueOf(con.getCodigoVehiculo()));
-                
+
                 JOptionPane.showMessageDialog(rootPane, "Consulta realizada con exito");
             }else{
                 JOptionPane.showMessageDialog(rootPane, "No se ha encontrado ningun Conductor con esta identificación, Verifique e intente nuevamente");
@@ -1085,7 +1085,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private void AEjButtonActualizarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AEjButtonActualizarCActionPerformed
         try {
             conductor con = new conductor();
-            
+
             con.setId(Long.parseLong(AEjTextFieldId.getText()));
             con.setNombre(AEjTextFieldNombre.getText());
             con.setApellido(AEjTextFieldApellido.getText());
@@ -1103,7 +1103,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             con.setEstadoCivil(AEjTextFieldEstadoCivil.getText());
             con.setCodigoVehiculo(Long.parseLong(AEjTextFieldCodVehiculo.getText()));
             boolean actualizarOk = con.actualizarConductor();
-            
+
             if (actualizarOk) {
                 AEjTextFieldId.setText("");
                 AEjTextFieldId.setEnabled(true);
@@ -1145,7 +1145,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
                 AEjTextAreaDescripcion.setText(veh.getDescripcion());
                 AEjTextFieldFIO.setText(veh.getFechaInicioOperacion());
                 AEjLabelEstadoAsignacion.setText(String.valueOf(veh.getEstadoAsignacion()));
-                
+
                 JOptionPane.showMessageDialog(rootPane, "Consulta realizada con exito");
             }else{
                 JOptionPane.showMessageDialog(rootPane, "No se ha encontrado ningun Vehiculo con esta identificación, Verifique e intente nuevamente");
@@ -1158,7 +1158,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private void AEjButtonActualizarVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AEjButtonActualizarVActionPerformed
         try {
             vehiculo veh = new vehiculo();
-            
+
             veh.setCodigoVehiculo(Long.parseLong(AEjTextFieldCodVehiculoV.getText()));
             veh.setPlaca(AEjTextFieldPlaca.getText());
             veh.setTipo(AEjTextFieldTipo.getText());
@@ -1167,7 +1167,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             veh.setDescripcion(AEjTextAreaDescripcion.getText());
             veh.setFechaInicioOperacion(AEjTextFieldFIO.getText());
             boolean actualizarOk = veh.actualizarVehiculo();
-            
+
             if (actualizarOk) {
                 AEjTextFieldCodVehiculoV.setText("");
                 AEjTextFieldCodVehiculoV.setEnabled(true);
@@ -1251,7 +1251,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

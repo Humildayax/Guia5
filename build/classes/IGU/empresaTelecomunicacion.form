@@ -123,9 +123,26 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
                                       <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="VjTextFieldFIO" min="-2" pref="233" max="-2" attributes="0"/>
+=======
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="VjTextFieldFIO" min="-2" pref="233" max="-2" attributes="0"/>
+                                          <Component id="VjTextFieldEstadoAsignacion" min="-2" pref="233" max="-2" attributes="0"/>
+                                      </Group>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -175,7 +192,16 @@
                                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="VjTextFieldFIO" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+<<<<<<< HEAD
                               <EmptySpace pref="301" max="32767" attributes="0"/>
+=======
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="VjTextFieldEstadoAsignacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="260" max="32767" attributes="0"/>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                               <Component id="VjButtonGuardar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
@@ -239,6 +265,17 @@
                         <Property name="text" type="java.lang.String" value="Fecha de Inicio de Operacion"/>
                       </Properties>
                     </Component>
+<<<<<<< HEAD
+=======
+                    <Component class="javax.swing.JLabel" name="jLabel24">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Estado de Asignacion"/>
+                      </Properties>
+                    </Component>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                     <Component class="javax.swing.JTextField" name="VjTextFieldFIO">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -307,6 +344,16 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VjButtonGuardarActionPerformed"/>
                       </Events>
                     </Component>
+<<<<<<< HEAD
+=======
+                    <Component class="javax.swing.JTextField" name="VjTextFieldEstadoAsignacion">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="14" style="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel4">
@@ -373,9 +420,15 @@
                                                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
+<<<<<<< HEAD
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="AEjTextFieldFIO" max="32767" attributes="0"/>
                                                   <Component id="AEjLabelEstadoAsignacion" max="32767" attributes="0"/>
+=======
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="AEjTextFieldFIO" alignment="1" min="-2" pref="233" max="-2" attributes="0"/>
+                                                  <Component id="AEjTextFieldEstadoAsignacion" alignment="1" min="-2" pref="233" max="-2" attributes="0"/>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                                               </Group>
                                           </Group>
                                       </Group>
@@ -436,21 +489,43 @@
                                   <Component id="AEjTextFieldFIO" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
                                   <Component id="AEjLabelEstadoAsignacion" min="-2" pref="17" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+=======
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AEjTextFieldEstadoAsignacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="AEjButtonActualizarV" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="AEjButtonEliminarV" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+<<<<<<< HEAD
                               <EmptySpace pref="201" max="32767" attributes="0"/>
+=======
+                              <EmptySpace pref="198" max="32767" attributes="0"/>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
+<<<<<<< HEAD
+=======
+                    <Component class="javax.swing.JTextField" name="AEjTextFieldEstadoAsignacion">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="14" style="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                     <Component class="javax.swing.JLabel" name="jLabel41">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -605,6 +680,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AEjButtonActualizarVActionPerformed"/>
                       </Events>
                     </Component>
+<<<<<<< HEAD
                     <Component class="javax.swing.JLabel" name="AEjLabelEstadoAsignacion">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -621,6 +697,8 @@
                         </Property>
                       </Properties>
                     </Component>
+=======
+>>>>>>> 9131a58c1c34a88b3062bb90c723a62322603f0d
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel5">
