@@ -270,4 +270,326 @@ public class conductor {
             return false;
         }
     }
+    
+    public DefaultTableModel consultarConductor(){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarIdConductor(int id){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE identificacion = " + id);
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarNombreConductor(String nombre){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE nombres = '" + nombre + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+        public DefaultTableModel consultarApellidoConductor(String apellido){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE apellidos = '" + apellido + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+        
+        public DefaultTableModel consultarCatLicConductor(String catLic){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE CategoriaLicencia = '" + catLic + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+        
+        public DefaultTableModel consultarCodVehiculoConductor(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE codigoVehiculo = '" + cod + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+        
+        public DefaultTableModel consultarCiudadBarrioConductor(String cB){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE ciudadResidencia = '" + cB + "' || barrio = '" + cB + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
 }

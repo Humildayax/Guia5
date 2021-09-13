@@ -78,6 +78,11 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         AEjButtonActualizarV = new javax.swing.JButton();
         AEjLabelEstadoAsignacion = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTableV = new javax.swing.JTable();
+        CVjComboBox = new javax.swing.JComboBox<>();
+        CVjButtonConsultar = new javax.swing.JButton();
+        CVjTextField = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
@@ -151,6 +156,11 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         AEjButtonActualizarC = new javax.swing.JButton();
         AEjButtonEliminarC = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
+        CCjComboBox = new javax.swing.JComboBox<>();
+        CCjTextField = new javax.swing.JTextField();
+        CCjButtonConsultar = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTableC = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -456,15 +466,58 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Actualizar/Eliminar", jPanel4);
 
+        jTableV.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTableV);
+
+        CVjComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        CVjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ver Todos", "Codigo de Vehiculo", "Placa", "Modelo", "Fecha de Inicio de Operacion", "Estado de Asignacion", "Tipo y Marca" }));
+
+        CVjButtonConsultar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        CVjButtonConsultar.setText("Consultar");
+        CVjButtonConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CVjButtonConsultarActionPerformed(evt);
+            }
+        });
+
+        CVjTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(CVjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(CVjComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(189, 189, 189)
+                        .addComponent(CVjButtonConsultar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 744, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(CVjComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CVjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(CVjButtonConsultar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane2.addTab("Consultas", jPanel5);
@@ -928,15 +981,58 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("Actualizar/Eliminar", jPanel7);
 
+        CCjComboBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        CCjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ver Todos", "Identificacion", "Nombre", "Apellido", "Categoria de Licencia", "Codigo del Vehiculo", "Ciudad y Barrio" }));
+
+        CCjTextField.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        CCjButtonConsultar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        CCjButtonConsultar.setText("Consultar");
+        CCjButtonConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CCjButtonConsultarActionPerformed(evt);
+            }
+        });
+
+        jTableC.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTableC);
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(CCjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(CCjComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(189, 189, 189)
+                        .addComponent(CCjButtonConsultar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 744, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(CCjComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CCjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(CCjButtonConsultar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane3.addTab("Consultas", jPanel8);
@@ -1244,6 +1340,120 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_AEjButtonEliminarCActionPerformed
 
+    private void CCjButtonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCjButtonConsultarActionPerformed
+        conductor con = new conductor();
+        if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Ver Todos")){
+            DefaultTableModel modelo = con.consultarConductor();
+            jTableC.setVisible(true);
+            jTableC.setModel(modelo);
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Identificacion")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Numero de Identificacion");
+            }else{
+                DefaultTableModel modelo = con.consultarIdConductor(Integer.parseInt(CCjTextField.getText()));
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Nombre")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Nombre");
+            }else{
+                DefaultTableModel modelo = con.consultarNombreConductor(CCjTextField.getText());
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Apellido")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Apellido");
+            }else{
+                DefaultTableModel modelo = con.consultarApellidoConductor(CCjTextField.getText());
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Categoria de Licencia")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite una Categoria de Licencia");
+            }else{
+                DefaultTableModel modelo = con.consultarCatLicConductor(CCjTextField.getText());
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Codigo del Vehiculo")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Codigo de Vehiculo");
+            }else{
+                DefaultTableModel modelo = con.consultarCodVehiculoConductor(CCjTextField.getText());
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }else if(CCjComboBox.getSelectedItem().toString().equalsIgnoreCase("Ciudad y Barrio")){
+            if(CCjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite una Ciudad o un Barrio");
+            }else{
+                DefaultTableModel modelo = con.consultarCiudadBarrioConductor(CCjTextField.getText());
+                jTableC.setVisible(true);
+                jTableC.setModel(modelo);
+            }
+        }
+    }//GEN-LAST:event_CCjButtonConsultarActionPerformed
+
+    private void CVjButtonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CVjButtonConsultarActionPerformed
+        vehiculo veh = new vehiculo();
+        if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Ver Todos")){
+            DefaultTableModel modelo = veh.consultarVehiculo();
+            jTableV.setVisible(true);
+            jTableV.setModel(modelo);
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Codigo de Vehiculo")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Codigo de Vehiculo");
+            }else{
+                DefaultTableModel modelo = veh.consultarCodVehiculoVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Placa")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite una Placa");
+            }else{
+                DefaultTableModel modelo = veh.consultarPlacaVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Modelo")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Modelo");
+            }else{
+                DefaultTableModel modelo = veh.consultarModeloVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Fecha de Inicio de Operacion")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite una Fecha de Inicio de Operacion");
+            }else{
+                DefaultTableModel modelo = veh.consultarFIOVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Estado de Asignacion")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Estado de Asignacion");
+            }else{
+                DefaultTableModel modelo = veh.consultarEstadoAsignacionVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }else if(CVjComboBox.getSelectedItem().toString().equalsIgnoreCase("Tipo y Marca")){
+            if(CVjTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(rootPane, "Digite un Tipo o una Marca");
+            }else{
+                DefaultTableModel modelo = veh.consultarTMVehiculo(CVjTextField.getText());
+                jTableV.setVisible(true);
+                jTableV.setModel(modelo);
+            }
+        }
+    }//GEN-LAST:event_CVjButtonConsultarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1310,6 +1520,12 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JTextField AEjTextFieldTelefono;
     private javax.swing.JTextField AEjTextFieldTipo;
     private javax.swing.JTextField AEjTextFieldTurno;
+    private javax.swing.JButton CCjButtonConsultar;
+    private javax.swing.JComboBox<String> CCjComboBox;
+    private javax.swing.JTextField CCjTextField;
+    private javax.swing.JButton CVjButtonConsultar;
+    private javax.swing.JComboBox<String> CVjComboBox;
+    private javax.swing.JTextField CVjTextField;
     private javax.swing.JButton CjButtonGuardar;
     private javax.swing.JTextField CjTextFieldApellido;
     private javax.swing.JTextField CjTextFieldBarrio;
@@ -1392,8 +1608,12 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTable jTableC;
+    private javax.swing.JTable jTableV;
     // End of variables declaration//GEN-END:variables
 }

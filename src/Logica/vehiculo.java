@@ -187,4 +187,270 @@ public class vehiculo {
             return false;
         }
     }
+    
+    public DefaultTableModel consultarVehiculo(){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarCodVehiculoVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE CodigoVehiculo = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarPlacaVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE Placa = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarModeloVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE Modelo = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarFIOVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE FechaInicioOperacion = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarEstadoAsignacionVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE EstadoAsignacion = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarTMVehiculo(String cod){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE Tipo = '" + cod + "' || Marca = '" + cod + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
 }
