@@ -226,13 +226,51 @@ public class vehiculo {
         }
     }
     
-    public DefaultTableModel consultarVehiculo(String dato){
+    public DefaultTableModel consultarVehiculo(String nombre, String dato){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
             cx = new conexion();
             con = cx.getConexion();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE codigoVehiculo = '" + dato + "' OR placa = '" + dato + "' OR modelo = '" + dato + "' OR fechaInicioOperacion = '" + dato + "' OR estadoAsignacion = '" + dato + "' OR Tipo = '" + dato + "' OR Marca = '" + dato + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE " + nombre + " = '" + dato + "'");
+            
+            modelo.addColumn("CodigoVehiculo");
+            modelo.addColumn("Placa");
+            modelo.addColumn("Tipo");
+            modelo.addColumn("Marca");
+            modelo.addColumn("Modelo");
+            modelo.addColumn("Descripcion");
+            modelo.addColumn("FechaInicioOperacion");
+            modelo.addColumn("EstadoAsignacion");
+            int numColumnas = 8;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }
+    
+    public DefaultTableModel consultarVehiculo(String nombre1, String nombre2, String dato){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE " + nombre1 + " = '" + dato + "' or " + nombre2 + " = '" + dato + "'");
             
             modelo.addColumn("CodigoVehiculo");
             modelo.addColumn("Placa");

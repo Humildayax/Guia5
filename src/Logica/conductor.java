@@ -317,13 +317,13 @@ public class conductor {
         }
     }
     
-    public DefaultTableModel consultarIdConductor(String dato){
+    public DefaultTableModel consultarConductor(String nombre, String dato){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
             cx = new conexion();
             con = cx.getConexion();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE identificacion = '" + dato + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE " + nombre + " = '" + dato + "'");
             
             modelo.addColumn("Identificacion");
             modelo.addColumn("Nombres");
@@ -363,13 +363,13 @@ public class conductor {
         }
     }   
     
-    public DefaultTableModel consultarConductor(String dato){
+    public DefaultTableModel consultarConductor(String nombre1, String nombre2, String dato){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
             cx = new conexion();
             con = cx.getConexion();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE nombres = '" + dato + "' OR apellidos = '" + dato + "' OR categoriaLicencia = '" + dato + "' OR codigoVehiculo = '" + dato + "' OR ciudadResidencia = '" + dato + "' OR barrio = '" + dato + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE " + nombre1 + " = '" + dato + "' OR " + nombre2 + " = '" + dato + "'");
             
             modelo.addColumn("Identificacion");
             modelo.addColumn("Nombres");
