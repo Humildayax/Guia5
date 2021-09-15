@@ -317,13 +317,59 @@ public class conductor {
         }
     }
     
+    public DefaultTableModel consultarIdConductor(String dato){
+        DefaultTableModel modelo = new DefaultTableModel();
+        try {
+            cx = new conexion();
+            con = cx.getConexion();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE identificacion = '" + dato + "'");
+            
+            modelo.addColumn("Identificacion");
+            modelo.addColumn("Nombres");
+            modelo.addColumn("Apellidos");
+            modelo.addColumn("Genero");
+            modelo.addColumn("Telefono");
+            modelo.addColumn("celular");
+            modelo.addColumn("FechaNacimiento");
+            modelo.addColumn("Correo");
+            modelo.addColumn("NumLicencia");
+            modelo.addColumn("CategoriaLicencia");
+            modelo.addColumn("Turno");
+            modelo.addColumn("CiudadResidencia");
+            modelo.addColumn("Direccion");
+            modelo.addColumn("Barrio");
+            modelo.addColumn("EstadoCivil");
+            modelo.addColumn("CodigoVehiculo");
+            int numColumnas = 16;
+            
+            while (rs.next()) {                
+                Object[] fila = new Object[numColumnas];
+                
+                for (int i = 0; i < numColumnas; i++) {
+                    fila[i] = rs.getObject(i+1);
+                }
+                
+                modelo.addRow(fila);
+            }
+            
+            stmt.close();
+            con.close();
+            
+            return  modelo;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return modelo;
+        }
+    }   
+    
     public DefaultTableModel consultarConductor(String dato){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
             cx = new conexion();
             con = cx.getConexion();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE identificacion = '" + dato + "' OR nombres = '" + dato + "' OR apellidos = '" + dato + "' OR categoriaLicencia = '" + dato + "' OR codigoVehiculo = '" + dato + "' OR ciudad = '" + dato + "' OR barrio = '" + dato + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM conductor WHERE nombres = '" + dato + "' OR apellidos = '" + dato + "' OR categoriaLicencia = '" + dato + "' OR codigoVehiculo = '" + dato + "' OR ciudadResidencia = '" + dato + "' OR barrio = '" + dato + "'");
             
             modelo.addColumn("Identificacion");
             modelo.addColumn("Nombres");
