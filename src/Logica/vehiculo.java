@@ -422,7 +422,7 @@ public class vehiculo {
             cx = new conexion();
             con = cx.getConexion();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE Tipo = '" + cod + "' || Marca = '" + cod + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM vehiculo WHERE Tipo = '" + cod + "' OR Marca = '" + cod + "'");
             
             modelo.addColumn("CodigoVehiculo");
             modelo.addColumn("Placa");

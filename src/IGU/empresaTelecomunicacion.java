@@ -1350,7 +1350,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite un Numero de Identificacion");
             }else{
-                DefaultTableModel modelo = con.consultarIdConductor(Integer.parseInt(CCjTextField.getText()));
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
@@ -1358,7 +1358,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite un Nombre");
             }else{
-                DefaultTableModel modelo = con.consultarNombreConductor(CCjTextField.getText());
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
@@ -1366,7 +1366,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite un Apellido");
             }else{
-                DefaultTableModel modelo = con.consultarApellidoConductor(CCjTextField.getText());
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
@@ -1374,7 +1374,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite una Categoria de Licencia");
             }else{
-                DefaultTableModel modelo = con.consultarCatLicConductor(CCjTextField.getText());
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
@@ -1382,7 +1382,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite un Codigo de Vehiculo");
             }else{
-                DefaultTableModel modelo = con.consultarCodVehiculoConductor(CCjTextField.getText());
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
@@ -1390,7 +1390,7 @@ public class empresaTelecomunicacion extends javax.swing.JFrame {
             if(CCjTextField.getText().equals("")){
                 JOptionPane.showMessageDialog(rootPane, "Digite una Ciudad o un Barrio");
             }else{
-                DefaultTableModel modelo = con.consultarCiudadBarrioConductor(CCjTextField.getText());
+                DefaultTableModel modelo = con.consultarConductor(CCjTextField.getText());
                 jTableC.setVisible(true);
                 jTableC.setModel(modelo);
             }
